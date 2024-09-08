@@ -13,12 +13,20 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+.image{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
 
 
 .container {
     margin-top: 30px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
     display: grid;
     grid-template-columns: repeat(4 , minmax(0,1fr)) ;
     gap: 1rem;
@@ -31,6 +39,7 @@ h1 {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .investor img {
@@ -52,4 +61,17 @@ h1 {
 .investor .logo {
     width: 100px; 
     height: auto;
+}
+
+@media (max-width:768px){
+    .container{
+        grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+}
+
+@media (max-width:480px) {
+    .container{
+        grid-template-columns: 1fr
+    }
+    
 }
